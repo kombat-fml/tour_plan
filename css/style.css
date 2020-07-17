@@ -668,8 +668,8 @@ img {
     background-color: #333333;
   }
   .stars {
-    -ms-flex-preferred-size: content;
-        flex-basis: content;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
   .hotel {
     padding-top: 5px;
@@ -682,6 +682,9 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .hotel-info__stars {
+    margin-bottom: 0;
   }
   .hotel-info__text {
     width: 100%;
