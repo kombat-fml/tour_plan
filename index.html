@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=2dfa9b75-96cd-44a3-8c50-de51562f5566&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -111,9 +115,9 @@
                 <img class="stars__img" src="img/star.svg" alt="star" />
                 <img class="stars__img" src="img/star.svg" alt="star" />
               </div>
-              <h2 class="hotel-name hotel-info__hotel-name">
+              <h1 class="hotel-name hotel-info__hotel-name">
                 grand hilton hotel
-              </h2>
+              </h1>
               <span class="hotel-info__offer">Flash Offer</span>
             </div>
             <p class="hotel-info__description">
@@ -226,18 +230,7 @@
               <!-- /.booking__button -->
             </div>
             <!-- /.booking -->
-            <div class="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.042901071866!2d98.29359884118652!3d7.890580771886636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1595335309475!5m2!1sru!2sru"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                style="border-radius: 10px;"
-                allowfullscreen=""
-                aria-hidden="false"
-                tabindex="0"
-              ></iframe>
-            </div>
+            <div class="map" id="map"></div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right-wrapper -->
