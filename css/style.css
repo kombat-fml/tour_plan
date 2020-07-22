@@ -1102,9 +1102,17 @@ img {
   .map {
     width: 340px;
   }
+  .reviews {
+    padding-bottom: 60px;
+  }
   .reviews-slider__item {
     max-width: 580px;
     padding: 0 62px 30px 62px;
+  }
+  .reviews__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1213,6 +1221,13 @@ img {
   .subscribe__input {
     padding-left: 20px;
   }
+  .reviews {
+    padding-bottom: 50px;
+  }
+  .reviews__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
   .reviews-slider__item {
     padding: 0 31px 36px 31px;
   }
@@ -1249,6 +1264,14 @@ img {
   }
   .subscribe {
     width: 100%;
+  }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 42px;
+  }
+  .reviews-slider__text {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */
