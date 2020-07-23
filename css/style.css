@@ -1110,6 +1110,7 @@ img {
 }
 
 .card__title {
+  max-width: 200px;
   margin-top: auto;
   margin-bottom: 18px;
   color: #ffffff;
@@ -1139,6 +1140,7 @@ img {
     width: 590px;
   }
   .card {
+    height: 230px;
     width: 230px;
   }
 }
@@ -1205,6 +1207,7 @@ img {
     margin-bottom: 50px;
   }
   .card {
+    height: 255px;
     width: 340px;
   }
   .activities {
