@@ -9,7 +9,7 @@ var hotelSlider = new Swiper('.hotel-slider', {
   },
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
 });
 var reviewSlider = new Swiper('.reviews-slider', {

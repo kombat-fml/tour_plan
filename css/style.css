@@ -835,12 +835,14 @@ img {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (500px)[2];
-      grid-template-rows: repeat(2, 500px);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 30px;
 }
 
 .packages-card {
+  min-height: 500px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -862,17 +864,6 @@ img {
 
 .packages-card__image-block {
   position: relative;
-  width: 350px;
-  height: 250px;
-}
-
-.packages-card__image-block--big-card {
-  width: 365px;
-  height: 500px;
-}
-
-.packages-card__person-room {
-  margin-bottom: 24px;
 }
 
 .packages-card__offer {
@@ -892,6 +883,16 @@ img {
   padding: 30px 21px 25px 32px;
   background-color: #0A223D;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .packages-card__rating {
@@ -903,18 +904,18 @@ img {
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
-  margin: 0 0 27px 0;
+  margin: 0;
+}
+
+.packages-card__title-block {
+  margin-bottom: 23px;
 }
 
 .packages-card__text {
   font-size: 14px;
   line-height: 160.6%;
-  margin: 0;
+  margin: 0 0 23px 0;
   display: none;
-}
-
-.packages-card__text--big-card {
-  display: inline;
 }
 
 .packages-card__old-price {
@@ -955,15 +956,44 @@ img {
   outline: none;
 }
 
+.packages-card__person-room {
+  margin-bottom: 24px;
+}
+
 .packages__card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: (250px)[2];
-      grid-template-rows: repeat(2, 250px);
-  grid-column: span 1;
-  grid-row: span 1;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.packages__card--big-card {
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-column: span 2;
+}
+
+.packages__card--big-card .packages-card__image-block {
+  grid-row: span 2;
+}
+
+.packages__card--big-card .packages-card__offer {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 7px 12px;
+}
+
+.packages__card--big-card .packages-card__information {
+  padding: 46px 21px 30px 43px;
+  grid-row: span 2;
+}
+
+.packages__card--big-card .packages-card__rating {
+  display: block;
+}
+
+.packages__card--big-card .packages-card__text {
+  display: block;
 }
 
 .person-room__text {

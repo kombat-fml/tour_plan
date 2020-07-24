@@ -10,9 +10,11 @@
   &-wrapper
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: repeat(2, 500px)
+    grid-template-rows: repeat(2, 1fr)
+    grid-auto-rows: 1fr
     grid-gap: 30px
   &-card
+    min-height: 500px
     border-radius: 8px
     overflow: hidden
     &__image
@@ -28,14 +30,8 @@
       object-position: center 30%
       &-block
         position: relative
-        width: 350px
-        height: 250px
-        &--big-card
-          width: 365px
-          height: 500px
-    &__person
-      &-room
-        margin-bottom: 24px
+        // &--big-card
+        //   grid-row: span 2
     &__offer 
       position: absolute
       font-weight: 600
@@ -46,28 +42,29 @@
       color: $light
       background-color: $primary
       padding: 4px 9px
-      border-radius: 0px 4px 4px 0px
+      border-radius: 0px 4px 4px 0px        
     &__information
       padding: 30px 21px 25px 32px
       background-color: $dark
       color: $light
+      display: flex
+      justify-content: space-between
+      flex-direction: column
     &__rating
       display: none
       margin-bottom: 5px
-      &--big-card
-        // display: block
     &__title
       font-weight: bold
       font-size: 18px
       line-height: 23px
-      margin: 0 0 27px 0
+      margin: 0
+      &-block
+        margin-bottom: 23px
     &__text
       font-size: 14px
       line-height: 160.6%
-      margin: 0
+      margin: 0 0 23px 0
       display: none
-      &--big-card
-        display: inline
     &__old-price
       font-size: 14px
       line-height: 18px
@@ -91,12 +88,31 @@
       border-radius: 4px
       cursor: pointer
       outline: none
+    &__person
+      &-room
+        margin-bottom: 24px
   &__card
     display: grid
-    grid-template-columns: 100%
-    grid-template-rows: repeat(2, 250px)
-    grid-column: span 1
-    grid-row: span 1
+    grid-template-rows: 50% 50%
+    &--big-card
+      grid-template-columns: 50% 50%
+      grid-column: span 2
+      .packages
+        &-card
+          &__image
+            &-block
+              grid-row: span 2
+          &__offer
+            font-size: 12px
+            line-height: 15px
+            padding: 7px 12px
+          &__information
+            padding: 46px 21px 30px 43px
+            grid-row: span 2
+          &__rating
+            display: block
+          &__text
+            display: block
 .person
   &-room
     &__text
