@@ -59,3 +59,39 @@ function init() {
     );
   myMap.geoObjects.add(myGeoObject);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
+  const bigCard = document.getElementById('big-card');
+  console.log(bigCard.classList);
+
+  let clientWidth = document.documentElement.clientWidth;
+
+  if (clientWidth > 576) {
+    bigCard.classList.add('packages__card--big-card');
+  } else {
+    bigCard.classList.remove('packages__card--big-card');
+  }
+
+  window.addEventListener('resize', function () {
+    clientWidth = document.documentElement.clientWidth;
+    if (clientWidth > 576) {
+      bigCard.classList.add('packages__card--big-card');
+    } else {
+      bigCard.classList.remove('packages__card--big-card');
+    }
+  });
+});
+
+// document.ready(function () {
+//   var windowWidth = $(window).width();
+//   if (windowWidth > 576) $('#big-card').addClass('packages__card--big-card');
+//   else $('#big-card').removeClass('packages__card--big-card');
+
+//   $(window).resize(function () {
+//     var windowWidth = $(window).width();
+//     console.log(windowWidth);
+//     if (windowWidth > 576) $('#big-card').addClass('packages__card--big-card');
+//     else $('#big-card').removeClass('packages__card--big-card');
+//   });
+// });
