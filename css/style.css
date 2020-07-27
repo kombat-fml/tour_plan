@@ -1421,6 +1421,7 @@ button {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: #BDBDBD;
 }
 
 .footer__title {
@@ -1487,6 +1488,7 @@ button {
   line-height: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
+  color: inherit;
 }
 
 .footer__message {
@@ -1499,6 +1501,9 @@ button {
   height: 123px;
   margin-bottom: 22px;
   resize: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: inherit;
 }
 
 .footer__button {
