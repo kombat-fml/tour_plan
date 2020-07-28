@@ -165,13 +165,14 @@
       background-color: $light
       cursor: pointer
       outline: none
+      span
+        transition: all 0.3s
       &__line
         width: 16px
         height: 1px
         background-color: $text-color
       &--active
         span
-          transition: all 0.3s
           &:nth-child(1)
             transform: rotate(45deg) translate(3px, 4px)
           &:nth-child(2)

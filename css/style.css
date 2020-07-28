@@ -1824,14 +1824,14 @@ button {
     cursor: pointer;
     outline: none;
   }
+  .menu-button span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
   .menu-button__line {
     width: 16px;
     height: 1px;
     background-color: #333333;
-  }
-  .menu-button--active span {
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
   }
   .menu-button--active span:nth-child(1) {
     -webkit-transform: rotate(45deg) translate(3px, 4px);
