@@ -65,6 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const bigCard = document.getElementById('big-card');
 
   let clientWidth = document.documentElement.clientWidth;
+  let menuButton = document.querySelector('.menu-button');
+
+  menuButton.addEventListener('click', () => {
+    document
+      .querySelector('.navbar-bottom')
+      .classList.toggle('navbar-bottom--visible');
+  });
 
   if (clientWidth > 576) {
     bigCard.classList.add('packages__card--big-card');
