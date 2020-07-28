@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document
       .querySelector('.navbar-bottom')
       .classList.toggle('navbar-bottom--visible');
+    menuButton.classList.toggle('menu-button--active');
   });
 
   if (clientWidth > 576) {

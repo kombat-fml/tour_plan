@@ -1829,6 +1829,21 @@ button {
     height: 1px;
     background-color: #333333;
   }
+  .menu-button--active span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .menu-button--active span:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(3px, 4px);
+            transform: rotate(45deg) translate(3px, 4px);
+  }
+  .menu-button--active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-button--active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(2px, -3px);
+            transform: rotate(-45deg) translate(2px, -3px);
+  }
   .stars {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;

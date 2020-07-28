@@ -169,6 +169,15 @@
         width: 16px
         height: 1px
         background-color: $text-color
+      &--active
+        span
+          transition: all 0.3s
+          &:nth-child(1)
+            transform: rotate(45deg) translate(3px, 4px)
+          &:nth-child(2)
+            opacity: 0
+          &:nth-child(3)
+            transform: rotate(-45deg) translate(2px, -3px)
   .stars
     flex-basis: auto
   .hotel
