@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document
       .querySelector('.navbar-bottom')
       .classList.toggle('navbar-bottom--visible');
+
+    // Убираем скрол при открытом мобильном меню
+    if (document.querySelector('body').style.overflow != 'hidden') {
+      document.querySelector('body').style.overflow = 'hidden';
+    } else {
+      document.querySelector('body').style.overflow = null;
+    }
+
     menuButton.classList.toggle('menu-button--active');
   });
 
