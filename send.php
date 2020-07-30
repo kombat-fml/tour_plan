@@ -17,6 +17,7 @@ if ($form == 'subscribe') {
   <h2>Новая подписка</h2>
   <b>e-mail:</b><br>$email
   ";
+  $request = 'subscribe';
 } else {
   // Формирование самого письма
   $title = "Новое обращение Best Tour Plan";
@@ -26,6 +27,7 @@ if ($form == 'subscribe') {
   <b>Телефон:</b> $phone<br><br>
   <b>Сообщение:</b><br>$message
   ";
+  $request = 'send';
 };
 
 
@@ -57,5 +59,6 @@ try {
         $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
     }
 
+
     // Отображение результата
-    echo json_encode(["result" => $result, "status" => $status]);
+    header('Location: thanks.php?request='.$request);
