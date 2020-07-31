@@ -102,24 +102,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalButton = document.querySelector('.modal__close');
   const modalOverlay = document.querySelector('.modal__overlay');
   const modalDialog = document.querySelector('.modal__dialog');
+  const modalForm = document.querySelector('.modal__form');
 
-  const openModal = () => {
-    modalOverlay.classList.add('modal__overlay--active');
-    modalDialog.classList.add('modal__dialog--active');
-    document.querySelector('body').style.overflow = 'hidden';
-  };
-
-  const closeModal = (event) => {
-    event.preventDefault();
+  const closeModal = () => {
     modalOverlay.classList.remove('modal__overlay--active');
     modalDialog.classList.remove('modal__dialog--active');
     document.querySelector('body').style.overflow = null;
+    modalForm.reset();
   };
 
-  closeModalButton.addEventListener('click', closeModal);
-  //modalOverlay.addEventListener('keydown', )
+  closeModalButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    closeModal();
+  });
 
   modalButton.forEach((item) => {
-    item.addEventListener('click', openModal);
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+      modalOverlay.classList.add('modal__overlay--active');
+      modalDialog.classList.add('modal__dialog--active');
+      document.querySelector('body').style.overflow = 'hidden';
+    });
+  });
+
+  document.body.addEventListener(
+    'keyup',
+    function (e) {
+      var key = e.keyCode;
+      if (key == '27') {
+        closeModal();
+      }
+    },
+    false
+  );
+
+  modalOverlay.addEventListener('click', () => {
+    modalOverlay.classList.remove('modal__overlay--active');
+    modalDialog.classList.remove('modal__dialog--active');
+    document.querySelector('body').style.overflow = null;
+    modalForm.reset();
   });
 });
