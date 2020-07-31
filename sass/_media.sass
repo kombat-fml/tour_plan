@@ -106,6 +106,9 @@
   .bottom
     &__list, &__icons
       margin-left: 0
+  .modal
+    &__dialog
+      width: 478px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -312,6 +315,10 @@
         min-width: 31px
     &__input
       flex-basis: 100%
+  .modal
+    &__dialog
+      width: 450px
+      padding: 30px 60px
 @media (max-width: 576px)
   .logo 
     width: 99px
@@ -362,3 +369,13 @@
     &__input
       &--mobile
         width: 250px
+  .modal
+    &__dialog
+      max-width: 450px
+      width: 84%
+      padding: 20px 30px
+    &__info
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__button
+      order: 2

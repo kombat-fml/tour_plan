@@ -1,67 +1,68 @@
-var hotelSlider = new Swiper('.hotel-slider', {
-  // Optional parameters
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.hotel-slider__button--next',
-    prevEl: '.hotel-slider__button--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-});
-var reviewSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.reviews-slider__button--next',
-    prevEl: '.reviews-slider__button--prev',
-  },
-});
-
-ymaps.ready(init);
-function init() {
-  // Создание карты.
-  var myMap = new ymaps.Map('map', {
-      // Координаты центра карты.
-      // Порядок по умолчанию: «широта, долгота».
-      // Чтобы не определять координаты центра карты вручную,
-      // воспользуйтесь инструментом Определение координат.
-      center: [7.99, 98.291],
-      // Уровень масштабирования. Допустимые значения:
-      // от 0 (весь мир) до 19.
-      zoom: 16,
-    }),
-    myGeoObject = new ymaps.GeoObject(
-      {
-        // Описание геометрии.
-        geometry: {
-          type: 'Point',
-          coordinates: [7.99, 98.291],
-        },
-        // Свойства.
-        properties: {
-          // Контент метки.
-          iconContent: 'Hotel here',
-        },
-      },
-      {
-        // Опции.
-        // Иконка метки будет растягиваться под размер ее содержимого.
-        preset: 'islands#blackStretchyIcon',
-        // Метку можно перемещать.
-        draggable: false,
-      }
-    );
-  myMap.geoObjects.add(myGeoObject);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
+
+  var hotelSlider = new Swiper('.hotel-slider', {
+    // Optional parameters
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.hotel-slider__button--next',
+      prevEl: '.hotel-slider__button--prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+  });
+  var reviewSlider = new Swiper('.reviews-slider', {
+    // Optional parameters
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.reviews-slider__button--next',
+      prevEl: '.reviews-slider__button--prev',
+    },
+  });
+
+  ymaps.ready(init);
+  function init() {
+    // Создание карты.
+    var myMap = new ymaps.Map('map', {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [7.99, 98.291],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16,
+      }),
+      myGeoObject = new ymaps.GeoObject(
+        {
+          // Описание геометрии.
+          geometry: {
+            type: 'Point',
+            coordinates: [7.99, 98.291],
+          },
+          // Свойства.
+          properties: {
+            // Контент метки.
+            iconContent: 'Hotel here',
+          },
+        },
+        {
+          // Опции.
+          // Иконка метки будет растягиваться под размер ее содержимого.
+          preset: 'islands#blackStretchyIcon',
+          // Метку можно перемещать.
+          draggable: false,
+        }
+      );
+    myMap.geoObjects.add(myGeoObject);
+  }
+
   const bigCard = document.getElementById('big-card');
 
   let clientWidth = document.documentElement.clientWidth;
@@ -95,5 +96,30 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       bigCard.classList.remove('packages__card--big-card');
     }
+  });
+
+  const modalButton = document.querySelectorAll('button[data-toggle=modal]');
+  const closeModalButton = document.querySelector('.modal__close');
+  const modalOverlay = document.querySelector('.modal__overlay');
+  const modalDialog = document.querySelector('.modal__dialog');
+
+  const openModal = () => {
+    modalOverlay.classList.add('modal__overlay--active');
+    modalDialog.classList.add('modal__dialog--active');
+    document.querySelector('body').style.overflow = 'hidden';
+  };
+
+  const closeModal = (event) => {
+    event.preventDefault();
+    modalOverlay.classList.remove('modal__overlay--active');
+    modalDialog.classList.remove('modal__dialog--active');
+    document.querySelector('body').style.overflow = null;
+  };
+
+  closeModalButton.addEventListener('click', closeModal);
+  //modalOverlay.addEventListener('keydown', )
+
+  modalButton.forEach((item) => {
+    item.addEventListener('click', openModal);
   });
 });

@@ -11,8 +11,9 @@ $message = $_POST['message'];
 $email = $_POST['email'];
 $form = $_POST['form']; 
 
+
 if ($form == 'subscribe') {
-  $title = "Новое подписка на сайте Best Tour Plan";
+  $title = "Новая подписка на сайте Best Tour Plan";
   $body = "
   <h2>Новая подписка</h2>
   <b>e-mail:</b><br>$email
@@ -59,6 +60,6 @@ try {
         $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
     }
 
-
+    //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
     // Отображение результата
     header('Location: thanks.php?request='.$request);
