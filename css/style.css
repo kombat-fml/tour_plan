@@ -409,6 +409,10 @@ button {
   color: #BDBDBD;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -2216,8 +2220,8 @@ button {
   }
   .modal__dialog {
     max-width: 450px;
-    width: 84%;
-    padding: 20px 30px;
+    width: 88%;
+    padding: 20px 20px;
   }
   .modal__info {
     -ms-flex-preferred-size: 100%;

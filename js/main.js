@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const bigCard = document.getElementById('big-card');
+  const body = document.querySelector('body');
 
   let clientWidth = document.documentElement.clientWidth;
   let menuButton = document.querySelector('.menu-button');
@@ -74,11 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .classList.toggle('navbar-bottom--visible');
 
     // Убираем скрол при открытом мобильном меню
-    if (document.querySelector('body').style.overflow != 'hidden') {
-      document.querySelector('body').style.overflow = 'hidden';
-    } else {
-      document.querySelector('body').style.overflow = null;
-    }
+    body.classList.toggle('no-scroll');
 
     menuButton.classList.toggle('menu-button--active');
   });
@@ -107,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     modalOverlay.classList.remove('modal__overlay--active');
     modalDialog.classList.remove('modal__dialog--active');
-    document.querySelector('body').style.overflow = null;
+    body.classList.remove('no-scroll');
     modalForm.reset();
   };
 
@@ -121,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       modalOverlay.classList.add('modal__overlay--active');
       modalDialog.classList.add('modal__dialog--active');
-      document.querySelector('body').style.overflow = 'hidden';
+      body.classList.add('no-scroll');
     });
   });
 
