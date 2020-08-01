@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -982,7 +984,7 @@
             </p>
             <ul class="footer__ul">
               <li class="footer__item footer__item--mb-2">
-                <div class="footer__icon-wrapper">
+                <div class="footer__icon-wrapper footer__icon-wrapper--map">
                   <img
                     class="footer__icon"
                     src="img/map-marker.svg"
@@ -993,17 +995,23 @@
                 States
               </li>
               <li class="footer__item footer__item--mb-2">
-                <div class="footer__icon-wrapper">
+                <div class="footer__icon-wrapper footer__icon-wrapper--phone">
                   <img
                     class="footer__icon"
                     src="img/contact-phone-call.svg"
                     alt="icon: phone-call"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="">
+                  Tel (business hours):
+                  <a href="tel:2691500" class="footer__link">269 1500</a><br />
+                  Tel (hotline) Monday - Saturday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00&nbsp;am&nbsp;– 20:00&nbsp;pm) <br />
+                  Tel (hotline) Sunday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00&nbsp;am&nbsp;– 14:00&nbsp;pm)
+                </div>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -1013,7 +1021,9 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">
+                  cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>

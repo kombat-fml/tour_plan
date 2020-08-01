@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
 
   let clientWidth = document.documentElement.clientWidth;
+  //let clientHeight = document.documentElement.clientHeight;
   const menuButton = document.querySelector('.menu-button');
 
   //открытие и закрытие мобильного меню
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', function () {
     clientWidth = document.documentElement.clientWidth;
+    //clientHeight = document.documentElement.clientHeight;
     if (clientWidth > 576) {
       bigCard.classList.add('packages__card--big-card');
     } else {

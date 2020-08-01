@@ -1451,7 +1451,6 @@ button {
   -ms-grid-row-span: 2;
   grid-row: 2 / 4;
   grid-column: span 2;
-  margin-left: -40px;
 }
 
 .footer__contact-details {
@@ -1460,6 +1459,11 @@ button {
 
 .footer__contact-form {
   grid-column: span 2;
+}
+
+.footer__legal {
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .footer__title {
@@ -1488,9 +1492,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   line-height: 160%;
   color: #BDBDBD;
@@ -1502,6 +1506,15 @@ button {
 
 .footer__icon-wrapper {
   min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__icon-wrapper--phone, .footer__icon-wrapper--map {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 .footer__text {
@@ -1540,10 +1553,6 @@ button {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
-}
-
-.footer__additional {
-  margin-left: -40px;
 }
 
 .bottom {
@@ -2123,6 +2132,8 @@ button {
     grid-column: 1;
   }
   .footer__legal {
+    -ms-grid-column-align: start;
+        justify-self: start;
     -ms-grid-row: 5;
     grid-row: 5;
     -ms-grid-column: 1;
