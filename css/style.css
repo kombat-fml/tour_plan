@@ -411,6 +411,7 @@ button {
 
 .no-scroll {
   overflow: hidden;
+  padding-right: 0;
 }
 
 .navbar {
@@ -442,6 +443,7 @@ button {
 
 .navbar-bottom {
   background-color: #0A223D;
+  overflow: auto;
 }
 
 .navbar-menu {
@@ -1588,32 +1590,9 @@ button {
   margin-left: -136px;
 }
 
-.modal__overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 143, 223, 0.39);
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.modal__overlay--active {
-  visibility: visible;
-  opacity: 1;
-}
-
 .modal__dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 101;
+  position: relative;
+  z-index: 102;
   max-width: 478px;
   padding: 33px 88px;
   background-color: #0A223D;
@@ -1623,6 +1602,7 @@ button {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  margin: 5px auto;
 }
 
 .modal__dialog--active {
@@ -1670,6 +1650,34 @@ button {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+.modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background-color: rgba(0, 143, 223, 0.39);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  overflow: auto;
+}
+
+.modal__container--active {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
@@ -2232,6 +2240,12 @@ button {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+
+@media (max-height: 500px) {
+  .modal__container {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,24 +1,7 @@
 .modal
-  &__overlay
-    position: fixed
-    left: 0
-    top: 0
-    right: 0
-    bottom: 0
-    background-color: rgba(0, 143, 223, 0.39)
-    z-index: 100
-    visibility: hidden
-    opacity: 0
-    transition: opacity 0.3s
-    &--active
-      visibility: visible
-      opacity: 1
   &__dialog
-    position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    z-index: 101
+    position: relative
+    z-index: 102
     max-width: 478px
     padding: 33px 88px
     background-color: $dark
@@ -27,6 +10,7 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.3s
+    margin: 5px auto
     &--active
       visibility: visible
       opacity: 1
@@ -62,3 +46,23 @@
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+.modal
+  &__container
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 101
+    background-color: rgba(0, 143, 223, 0.39)
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.3s
+    overflow: auto
+    &--active
+      visibility: visible
+      opacity: 1

@@ -67,8 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
 
   let clientWidth = document.documentElement.clientWidth;
-  let menuButton = document.querySelector('.menu-button');
+  const menuButton = document.querySelector('.menu-button');
 
+  //открытие и закрытие мобильного меню
   menuButton.addEventListener('click', () => {
     document
       .querySelector('.navbar-bottom')
@@ -97,15 +98,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const modalButton = document.querySelectorAll('button[data-toggle=modal]');
   const closeModalButton = document.querySelector('.modal__close');
-  const modalOverlay = document.querySelector('.modal__overlay');
   const modalDialog = document.querySelector('.modal__dialog');
+  const modalContainer = document.querySelector('.modal__container');
   const modalForm = document.querySelector('.modal__form');
 
   const closeModal = () => {
-    modalOverlay.classList.remove('modal__overlay--active');
     modalDialog.classList.remove('modal__dialog--active');
+    modalContainer.classList.remove('modal__container--active');
     body.classList.remove('no-scroll');
+    body.style.paddingRight = 0;
     modalForm.reset();
+  };
+
+  //определяем ширину скролла
+  const returnScrollWidth = () => {
+    let div = document.createElement('div');
+
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+
+    // мы должны вставить элемент в документ, иначе размеры будут равны 0
+    document.body.append(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+
+    div.remove();
+    return scrollWidth;
   };
 
   closeModalButton.addEventListener('click', (event) => {
@@ -116,27 +134,33 @@ document.addEventListener('DOMContentLoaded', () => {
   modalButton.forEach((item) => {
     item.addEventListener('click', (event) => {
       event.preventDefault();
-      modalOverlay.classList.add('modal__overlay--active');
       modalDialog.classList.add('modal__dialog--active');
+      modalContainer.classList.add('modal__container--active');
       body.classList.add('no-scroll');
+      body.style.paddingRight = returnScrollWidth() + 'px';
     });
   });
 
+  //закрытие модального окна или меню при нажатии ESC
   document.body.addEventListener(
     'keyup',
     function (e) {
       var key = e.keyCode;
       if (key == '27') {
+        document
+          .querySelector('.navbar-bottom')
+          .classList.remove('navbar-bottom--visible');
+        menuButton.classList.remove('menu-button--active');
         closeModal();
       }
     },
     false
   );
 
-  modalOverlay.addEventListener('click', () => {
-    modalOverlay.classList.remove('modal__overlay--active');
-    modalDialog.classList.remove('modal__dialog--active');
-    document.querySelector('body').style.overflow = null;
-    modalForm.reset();
+  //закрытие модального окна при клике вне формы
+  modalContainer.addEventListener('click', (event) => {
+    if (!event.target.closest('.modal__dialog')) {
+      closeModal();
+    }
   });
 });
