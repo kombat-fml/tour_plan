@@ -1402,9 +1402,9 @@ button {
 .footer-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(min-content, 1fr))[4];
-      grid-template-columns: repeat(4, minmax(-webkit-min-content, 1fr));
-      grid-template-columns: repeat(4, minmax(min-content, 1fr));
+  -ms-grid-columns: (minmax(min-content, max-content))[4];
+      grid-template-columns: repeat(4, minmax(-webkit-min-content, -webkit-max-content));
+      grid-template-columns: repeat(4, minmax(min-content, max-content));
   grid-auto-rows: minmax(40px, -webkit-min-content);
   grid-auto-rows: minmax(40px, min-content);
   grid-gap: 20px;
