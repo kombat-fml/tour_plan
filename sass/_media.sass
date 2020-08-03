@@ -9,7 +9,8 @@
     width: 230px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &-wrapper
       grid-template-columns: repeat(10, 1fr)
     &__logo
@@ -97,7 +98,8 @@
       grid-row-gap: 30px
       padding-bottom: 56px
     &__input
-      flex-basis: 48%
+      &-group
+        flex-basis: 48%
     &__logo
       width: 104px
       grid-row: 1 / 2
@@ -341,7 +343,8 @@
       &-wrapper
         min-width: 31px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .modal
     &__dialog
       width: 450px
@@ -407,7 +410,7 @@
     &__button
       order: 2
       
-@media (max-height: 500px)
+@media (max-height: 530px)
   .modal
     &__container
       display: block

@@ -165,4 +165,34 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     }
   });
+
+  // Обработка форм
+  $('.form').each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      rules: {
+        name: {
+          required: true,
+          minlength: '2',
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+      messages: {
+        name: {
+          required: 'Please specify your name',
+          minlength: 'The name must be at least two characters',
+        },
+        email: {
+          required: 'We need your email address to contact you',
+          email: 'Your email address must be in the format of name@domain.com',
+        },
+        phone: {
+          required: 'Please, enter your phone number',
+        },
+      },
+    });
+  });
 });
