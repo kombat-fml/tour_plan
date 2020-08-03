@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         phone: {
           required: 'Please, enter your phone number',
+          minlength: 'Phone number must be ten digits',
         },
       },
     });
