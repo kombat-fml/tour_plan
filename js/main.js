@@ -179,6 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
           required: true,
           email: true,
         },
+        phone: {
+          required: true,
+          minlength: 18,
+        },
       },
       messages: {
         name: {
