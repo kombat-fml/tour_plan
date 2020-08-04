@@ -26,48 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  ymaps.ready(init);
-  function init() {
-    // Создание карты.
-    var myMap = new ymaps.Map('map', {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [7.99, 98.291],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 16,
-      }),
-      myGeoObject = new ymaps.GeoObject(
-        {
-          // Описание геометрии.
-          geometry: {
-            type: 'Point',
-            coordinates: [7.99, 98.291],
-          },
-          // Свойства.
-          properties: {
-            // Контент метки.
-            iconContent: 'Hotel here',
-          },
-        },
-        {
-          // Опции.
-          // Иконка метки будет растягиваться под размер ее содержимого.
-          preset: 'islands#blackStretchyIcon',
-          // Метку можно перемещать.
-          draggable: false,
-        }
-      );
-    myMap.geoObjects.add(myGeoObject);
-  }
-
   const bigCard = document.getElementById('big-card');
   const body = document.querySelector('body');
 
   let clientWidth = document.documentElement.clientWidth;
-  //let clientHeight = document.documentElement.clientHeight;
   const menuButton = document.querySelector('.menu-button');
 
   //открытие и закрытие мобильного меню
@@ -90,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', function () {
     clientWidth = document.documentElement.clientWidth;
-    //clientHeight = document.documentElement.clientHeight;
     if (clientWidth > 576) {
       bigCard.classList.add('packages__card--big-card');
     } else {

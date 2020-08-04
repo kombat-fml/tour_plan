@@ -865,6 +865,8 @@ button {
           align-items: center;
   color: inherit;
   text-decoration: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .call-center__icon {
@@ -1017,6 +1019,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  max-width: 180px;
 }
 
 .packages-card__person-room {
@@ -1084,7 +1087,10 @@ button {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
-  background: transparent;
+  background-image: url(../img/newsletter-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .newsletter:before {

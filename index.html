@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=2dfa9b75-96cd-44a3-8c50-de51562f5566&lang=ru_RU"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -269,7 +268,15 @@
               <!-- /.booking__button -->
             </div>
             <!-- /.booking -->
-            <div class="map" id="map"></div>
+            <div class="map" id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.040970778514!2d98.29419965600577!3d7.890782689699968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1596544446422!5m2!1sru!2sru"
+                style="border: 0; height: 100%; width: 100%;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right-wrapper -->
@@ -354,7 +361,9 @@
                 <span class="packages-card__old-price">$ 10,500</span>
                 <div class="packages-card__price-group">
                   <span class="packages-card__price">$ 8,500</span>
-                  <button class="packages-card__button">Book Now</button>
+                  <button class="packages-card__button" data-toggle="modal">
+                    Book Now
+                  </button>
                 </div>
                 <!-- /.packages-card__price-group -->
               </div>
@@ -430,7 +439,9 @@
                 <span class="packages-card__old-price">$ 8,500</span>
                 <div class="packages-card__price-group">
                   <span class="packages-card__price">$ 3,000</span>
-                  <button class="packages-card__button">Book Now</button>
+                  <button class="packages-card__button" data-toggle="modal">
+                    Book Now
+                  </button>
                 </div>
                 <!-- /.packages-card__price-group -->
               </div>
@@ -505,7 +516,9 @@
                 <span class="packages-card__old-price">$ 10,500</span>
                 <div class="packages-card__price-group">
                   <span class="packages-card__price">$ 9,500</span>
-                  <button class="packages-card__button">Book Now</button>
+                  <button class="packages-card__button" data-toggle="modal">
+                    Book Now
+                  </button>
                 </div>
                 <!-- /.packages-card__price-group -->
               </div>
@@ -580,7 +593,9 @@
                 <span class="packages-card__old-price">$ 4,500</span>
                 <div class="packages-card__price-group">
                   <span class="packages-card__price">$ 2,500</span>
-                  <button class="packages-card__button">Book Now</button>
+                  <button class="packages-card__button" data-toggle="modal">
+                    Book Now
+                  </button>
                 </div>
                 <!-- /.packages-card__price-group -->
               </div>
@@ -655,7 +670,9 @@
                 <span class="packages-card__old-price">$ 6,500</span>
                 <div class="packages-card__price-group">
                   <span class="packages-card__price">$ 3,500</span>
-                  <button class="packages-card__button">Book Now</button>
+                  <button class="packages-card__button" data-toggle="modal">
+                    Book Now
+                  </button>
                 </div>
                 <!-- /.packages-card__price-group -->
               </div>
@@ -670,12 +687,7 @@
     </section>
     <!-- /.packages -->
 
-    <section
-      class="newsletter"
-      data-parallax="scroll"
-      data-speed="0.2"
-      data-image-src="img/newsletter-bg.jpg"
-    >
+    <section class="newsletter" data-image-src="img/newsletter-bg.jpg">
       <div class="newsletter-wrapper">
         <h2 class="newsletter-title newsletter__title" data-aos="fade-right">
           subscribe to our
@@ -849,7 +861,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -863,7 +875,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -879,7 +891,7 @@
             <h3 class="card__title">
               Tamarind falls hiking trip&nbsp;-&nbsp;full day
             </h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -893,7 +905,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -1172,8 +1184,6 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-    <script src="js/parallax.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
