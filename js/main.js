@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       messages: {
         name: {
           required: 'Please specify your name',
-          minlength: 'The name must be at least two characters',
+          minlength: 'The name must be at least 2 characters',
         },
         email: {
           required: 'We need your email address to contact you',
@@ -195,9 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         phone: {
           required: 'Please, enter your phone number',
-          minlength: 'Phone number must be ten digits',
+          minlength: 'Phone number must be 10 digits',
         },
       },
     });
   });
+
+  AOS.init();
 });
