@@ -6,18 +6,13 @@
     <title>Best Tour Plan - Hotel Booking</title>
     <script src="js/lazysizes.min.js" async></script>
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="preconnect" href="https://www.google.com/maps/" /> -->
   </head>
 
   <body style="padding-right: 0;">
@@ -1506,24 +1501,8 @@
       <!-- /.modal__container -->
     </div>
     <!-- /.modal -->
-    <script>
-      function init() {
-        var imgDefer = document.getElementsByTagName('img');
-        for (var i = 0; i < imgDefer.length; i++) {
-          if (imgDefer[i].getAttribute('data-src')) {
-            imgDefer[i].setAttribute(
-              'src',
-              imgDefer[i].getAttribute('data-src')
-            );
-          }
-        }
-      }
-      // window.onload = init;
-    </script>
-    <!-- <script defer src="js/jquery-3.5.1.min.js"></script> -->
-    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- <script defer src="js/swiper-bundle.min.js"></script> -->
-    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/jquery-3.5.1.min.js"></script>
+    <script defer src="js/swiper-bundle.min.js"></script>
     <script defer src="js/jquery.mask.min.js"></script>
     <script defer src="js/jquery.validate.min.js"></script>
     <script defer src="js/main.js"></script>
