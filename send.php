@@ -26,6 +26,7 @@ if ($form == 'subscribe') {
   <h2>Новое обращение</h2>
   <b>Имя:</b> $name<br>
   <b>Телефон:</b> $phone<br><br>
+  <b>E-mail:</b> $email<br><br>
   <b>Сообщение:</b><br>$message
   ";
   $request = 'send';
