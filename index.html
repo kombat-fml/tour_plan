@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
     <script src="js/lazysizes.min.js" async></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
+    />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://www.google.com/maps/" />
+    <!-- <link rel="preconnect" href="https://www.google.com/maps/" /> -->
   </head>
 
   <body style="padding-right: 0;">
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="" class="logo" data-aos="fade-down">
+          <a href="" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -43,11 +46,7 @@
             </button>
           </form>
 
-          <a
-            href="#"
-            class="user navbar__user navbar__user--mobile--hidden"
-            data-aos="fade-down"
-          >
+          <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img
               src="img/user-avatar.jpg"
               alt="Avatar: Nathan"
@@ -179,89 +178,192 @@
               <div class="swiper-slide hotel-slider__item">
                 <picture>
                   <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
                     class="hotel-slider__img lazyload"
                     type="image/webp"
                     data-srcset="img/slide-1.webp"
+                    srcset="img/slide-1.webp 800w"
                   />
                   <source
+                    media="(min-width: 320px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-1mob.webp"
+                    srcset="img/slide-1mob.webp 530w"
+                  />
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
                     class="hotel-slider__img lazyload"
                     type="image/jpeg"
                     data-srcset="img/slide-1.jpg"
+                    srcset="img/slide-1.jpg 800w"
                   />
                   <img
+                    loading="lazy"
+                    sizes="(min-width: 320px) 100vw"
                     class="hotel-slider__img lazyload"
                     data-src="img/slide-1.jpg"
+                    data-srcset="img/slide-1mob.jpg"
+                    src="img/slide-1.jpg"
+                    srcset="img/slide-1mob.jpg 530w"
                     alt="slide"
                   />
                 </picture>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/webp"
-                  data-srcset="img/slide-2.webp"
-                />
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/jpeg"
-                  data-srcset="img/slide-2.jpg"
-                />
-                <img
-                  class="hotel-slider__img lazyload"
-                  data-src="img/slide-2.jpg"
-                  alt="slide"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-2.webp"
+                    srcset="img/slide-2.webp 1000w"
+                  />
+                  <source
+                    media="(min-width: 320px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-2mob.webp"
+                    srcset="img/slide-2mob.webp 530w"
+                  />
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/slide-2.jpg"
+                    srcset="img/slide-2.jpg 1000w"
+                  />
+                  <img
+                    loading="lazy"
+                    sizes="(min-width: 320px) 100vw"
+                    class="hotel-slider__img lazyload"
+                    data-src="img/slide-2.jpg"
+                    data-srcset="img/slide-2mob.jpg"
+                    srcset="img/slide-2mob.jpg 530w"
+                    src="img/slide-2.jpg"
+                    alt="slide"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/webp"
-                  data-srcset="img/slide-3.webp"
-                />
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/jpeg"
-                  data-srcset="img/slide-3.jpg"
-                />
-                <img
-                  class="hotel-slider__img lazyload"
-                  data-src="img/slide-3.jpg"
-                  alt="slide"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-3.webp"
+                    srcset="img/slide-3.webp 900w"
+                  />
+                  <source
+                    media="(min-width: 320px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-3mob.webp"
+                    srcset="img/slide-3mob.webp 530w"
+                  />
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/slide-3.jpg"
+                    srcset="img/slide-3.jpg 900w"
+                  />
+                  <img
+                    loading="lazy"
+                    sizes="(min-width: 320px) 100vw"
+                    class="hotel-slider__img lazyload"
+                    data-src="img/slide-3.jpg"
+                    src="img/slide-3.jpg"
+                    data-srcset="img/slide-3mob.jpg"
+                    srcset="img/slide-3mob.jpg 530w"
+                    alt="slide"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/webp"
-                  data-srcset="img/slide-4.webp"
-                />
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/jpeg"
-                  data-srcset="img/slide-4.jpg"
-                />
-                <img
-                  class="hotel-slider__img lazyload"
-                  data-src="img/slide-4.jpg"
-                  alt="slide"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-4.webp"
+                    srcset="img/slide-4.webp 1100w"
+                  />
+                  <source
+                    media="(min-width: 320px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-4mob.webp"
+                    srcset="img/slide-4mob.webp 530w"
+                  />
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/slide-4.jpg"
+                    srcset="img/slide-4.jpg 1100w"
+                  />
+                  <img
+                    loading="lazy"
+                    sizes="(min-width: 320px) 100vw"
+                    class="hotel-slider__img lazyload"
+                    data-src="img/slide-4.jpg"
+                    src="img/slide-4.jpg"
+                    data-srcset="img/slide-4mob.jpg"
+                    srcset="img/slide-4mob.jpg 530w"
+                    alt="slide"
+                  />
+                </picture>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/webp"
-                  data-srcset="img/slide-5.webp"
-                />
-                <source
-                  class="hotel-slider__img lazyload"
-                  type="image/jpeg"
-                  data-srcset="img/slide-5.jpg"
-                />
-                <img
-                  class="hotel-slider__img lazyload"
-                  data-src="img/slide-5.jpg"
-                  alt="slide"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-5.webp"
+                    srcset="img/slide-5.webp 900w"
+                  />
+                  <source
+                    media="(min-width: 320px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/webp"
+                    data-srcset="img/slide-5mob.webp"
+                    srcset="img/slide-5mob.webp 530w"
+                  />
+                  <source
+                    media="(min-width: 577px)"
+                    sizes="100vw"
+                    class="hotel-slider__img lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/slide-5.jpg"
+                    srcset="img/slide-5.jpg 900w"
+                  />
+                  <img
+                    loading="lazy"
+                    sizes="(min-width: 320px) 100vw"
+                    class="hotel-slider__img lazyload"
+                    data-src="img/slide-5.jpg"
+                    src="img/slide-5.jpg"
+                    data-srcset="img/slide-5mob.jpg"
+                    srcset="img/slide-5mob.jpg 530w"
+                    alt="slide"
+                  />
+                </picture>
               </div>
             </div>
             <!-- If we need navigation buttons -->
@@ -324,8 +426,9 @@
             <!-- /.booking -->
             <div class="map" id="map">
               <iframe
-                class="lazyload"
-                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.040970778514!2d98.29419965600577!3d7.890782689699968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1596544446422!5m2!1sru!2sru"
+                src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                class="map__frame"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.041275565149!2d98.29254205104498!3d7.890750807918006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1596638069078!5m2!1sru!2sru"
                 style="border: 0; height: 100%; width: 100%;"
                 allowfullscreen=""
                 aria-hidden="false"
@@ -351,11 +454,27 @@
             id="big-card"
           >
             <div class="packages-card__image-block">
-              <img
-                data-src="img/packages-1.jpg"
-                alt="Hotel Blue Haven"
-                class="packages-card__image lazyload"
-              />
+              <picture>
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/webp"
+                  data-srcset="img/packages-1.webp"
+                  srcset="img/packages-1.webp"
+                />
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/jpeg"
+                  data-srcset="img/packages-1.jpg"
+                  srcset="img/packages-1.jpg"
+                />
+                <img
+                  loading="lazy"
+                  class="packages-card__image lazyload"
+                  data-src="img/packages-1.jpg"
+                  src="img/packages-1.jpg"
+                  alt="Hotel Blue Haven"
+                />
+              </picture>
               <span class="packages-card__offer">
                 Flash Offer
               </span>
@@ -429,11 +548,27 @@
 
           <div class="packages-card packages__card">
             <div class="packages-card__image-block">
-              <img
-                data-src="img/packages-2.jpg"
-                alt="LUX* Belle Mare"
-                class="packages-card__image lazyload"
-              />
+              <picture>
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/webp"
+                  data-srcset="img/packages-2.webp"
+                  srcset="img/packages-2.webp"
+                />
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/jpeg"
+                  data-srcset="img/packages-2.jpg"
+                  srcset="img/packages-2.jpg"
+                />
+                <img
+                  loading="lazy"
+                  data-src="img/packages-2.jpg"
+                  src="img/packages-2.jpg"
+                  alt="LUX* Belle Mare"
+                  class="packages-card__image lazyload"
+                />
+              </picture>
               <span class="packages-card__offer">
                 Flash Offer
               </span>
@@ -506,11 +641,27 @@
           <!-- /.packages-card -->
           <div class="packages-card packages__card">
             <div class="packages-card__image-block">
-              <img
-                data-src="img/packages-3.jpg"
-                alt="White Palace"
-                class="packages-card__image lazyload"
-              />
+              <picture>
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/webp"
+                  data-srcset="img/packages-3.webp"
+                  srcset="img/packages-3.webp"
+                />
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/jpeg"
+                  data-srcset="img/packages-3.jpg"
+                  srcset="img/packages-3.jpg"
+                />
+                <img
+                  loading="lazy"
+                  data-src="img/packages-3.jpg"
+                  src="img/packages-3.jpg"
+                  alt="White Palace"
+                  class="packages-card__image lazyload"
+                />
+              </picture>
               <span class="packages-card__offer">
                 Flash Offer
               </span>
@@ -583,11 +734,27 @@
           <!-- /.packages-card -->
           <div class="packages-card packages__card">
             <div class="packages-card__image-block">
-              <img
-                data-src="img/packages-4.jpg"
-                alt="Luxury Place"
-                class="packages-card__image lazyload"
-              />
+              <picture>
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/webp"
+                  data-srcset="img/packages-4.webp"
+                  srcset="img/packages-4.webp"
+                />
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/jpeg"
+                  data-srcset="img/packages-4.jpg"
+                  srcset="img/packages-4.jpg"
+                />
+                <img
+                  loading="lazy"
+                  data-src="img/packages-4.jpg"
+                  src="img/packages-4.jpg"
+                  alt="Luxury Place"
+                  class="packages-card__image lazyload"
+                />
+              </picture>
               <span class="packages-card__offer">
                 Flash Offer
               </span>
@@ -660,11 +827,27 @@
           <!-- /.packages-card -->
           <div class="packages-card packages__card">
             <div class="packages-card__image-block">
-              <img
-                data-src="img/packages-5.jpg"
-                alt="Hotel Five Star"
-                class="packages-card__image lazyload"
-              />
+              <picture>
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/webp"
+                  data-srcset="img/packages-5.webp"
+                  srcset="img/packages-5.webp"
+                />
+                <source
+                  class="packages-card__image lazyload"
+                  type="image/jpeg"
+                  data-srcset="img/packages-5.jpg"
+                  srcset="img/packages-5.jpg"
+                />
+                <img
+                  loading="lazy"
+                  data-src="img/packages-5.jpg"
+                  src="img/packages-5.jpg"
+                  alt="Hotel Five Star"
+                  class="packages-card__image lazyload"
+                />
+              </picture>
               <span class="packages-card__offer">
                 Flash Offer
               </span>
@@ -742,9 +925,9 @@
     </section>
     <!-- /.packages -->
 
-    <section class="newsletter">
+    <section class="newsletter lazyload" data-bgset="img/newsletter-bg.jpg">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title" data-aos="fade-right">
+        <h2 class="newsletter-title newsletter__title">
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
@@ -752,14 +935,12 @@
           action="send.php"
           method="POST"
           class="subscribe newsletter__subscribe form"
-          data-aos="fade-left"
         >
           <input
             type="email"
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
-            required
           />
           <button
             class="subscribe__button"
@@ -782,11 +963,26 @@
             <div class="swiper-slide">
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
-                  <img
-                    data-src="img/reviews-avatar.jpg"
-                    alt="Photo: Megan Fox"
-                    class="reviews-slider__avatar lazyload"
-                  />
+                  <picture>
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/webp"
+                      data-srcset="img/reviews-avatar.webp"
+                      srcset="img/reviews-avatar.webp"
+                    />
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/jpeg"
+                      data-srcset="img/reviews-avatar.jpg"
+                      srcset="img/reviews-avatar.jpg"
+                    />
+                    <img
+                      data-src="img/reviews-avatar.jpg"
+                      src="img/reviews-avatar.jpg"
+                      alt="Photo: Megan Fox"
+                      class="reviews-slider__avatar lazyload"
+                    />
+                  </picture>
                   <h3 class="reviews-slider__username">Megan Fox</h3>
                   <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                   <div class="stars reviews-slider__rating">
@@ -817,11 +1013,26 @@
             <div class="swiper-slide">
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
-                  <img
-                    data-src="img/reviews-avatar-2.jpg"
-                    alt="Photo: Mishel Ford"
-                    class="reviews-slider__avatar lazyload"
-                  />
+                  <picture>
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/webp"
+                      data-srcset="img/reviews-avatar-2.webp"
+                      srcset="img/reviews-avatar-2.webp"
+                    />
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/jpeg"
+                      data-srcset="img/reviews-avatar-2.jpg"
+                      srcset="img/reviews-avatar-2.jpg"
+                    />
+                    <img
+                      data-src="img/reviews-avatar-2.jpg"
+                      src="img/reviews-avatar-2.jpg"
+                      alt="Photo: Mishel Ford"
+                      class="reviews-slider__avatar lazyload"
+                    />
+                  </picture>
                   <h3 class="reviews-slider__username">Mishel Ford</h3>
                   <span class="reviews-slider__date">Stayed 10 Sept, 2018</span>
                   <div class="stars reviews-slider__rating">
@@ -852,11 +1063,26 @@
             <div class="swiper-slide">
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
-                  <img
-                    data-src="img/reviews-avatar-3.jpg"
-                    alt="Photo: Adele Smith"
-                    class="reviews-slider__avatar lazyload"
-                  />
+                  <picture>
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/webp"
+                      data-srcset="img/reviews-avatar-3.webp"
+                      srcset="img/reviews-avatar-3.webp"
+                    />
+                    <source
+                      class="reviews-slider__avatar lazyload"
+                      type="image/jpeg"
+                      data-srcset="img/reviews-avatar-3.jpg"
+                      srcset="img/reviews-avatar-3.jpg"
+                    />
+                    <img
+                      data-src="img/reviews-avatar-3.jpg"
+                      src="img/reviews-avatar-3.jpg"
+                      alt="Photo: Adele Smith"
+                      class="reviews-slider__avatar lazyload"
+                    />
+                  </picture>
                   <h3 class="reviews-slider__username">Adele Smith</h3>
                   <span class="reviews-slider__date">Stayed 2 Dec, 2018</span>
                   <div class="stars reviews-slider__rating">
@@ -905,79 +1131,78 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div
-            class="card activities__card"
-            data-aos="fade-up"
-            data-aos-duration="300"
-          >
+          <div class="card activities__card">
             <picture>
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/webp"
+                data-srcset="img/activity-1.webp"
                 srcset="img/activity-1.webp"
               />
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/jpeg"
+                data-srcset="img/activity-1.jpg"
                 srcset="img/activity-1.jpg"
               />
               <img
+                loading="lazy"
+                data-src="img/activity-1.jpg"
                 src="img/activity-1.jpg"
                 alt="The curious corner of chamarel"
-                class="card__image"
+                class="card__image lazyload"
               />
             </picture>
-
             <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="fade-up"
-            data-aos-duration="400"
-          >
+          <div class="card activities__card">
             <picture>
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/webp"
+                data-srcset="img/activity-2.webp"
                 srcset="img/activity-2.webp"
               />
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/jpeg"
+                data-srcset="img/activity-2.jpg"
                 srcset="img/activity-2.jpg"
               />
               <img
+                loading="lazy"
+                data-src="img/activity-2.jpg"
                 src="img/activity-2.jpg"
                 alt="Gymkhana club golf course"
-                class="card__image"
+                class="card__image lazyload"
               />
             </picture>
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="fade-up"
-            data-aos-duration="500"
-          >
+          <div class="card activities__card">
             <picture>
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/webp"
+                data-srcset="img/activity-3.webp"
                 srcset="img/activity-3.webp"
               />
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/jpeg"
+                data-srcset="img/activity-3.jpg"
                 srcset="img/activity-3.jpg"
               />
               <img
+                loading="lazy"
+                data-src="img/activity-3.jpg"
                 src="img/activity-3.jpg"
                 alt="Tamarind falls hiking trip - full day"
-                class="card__image"
+                class="card__image lazyload"
               />
             </picture>
             <h3 class="card__title">
@@ -986,26 +1211,26 @@
             <button class="card__button" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
-          <div
-            class="card activities__card"
-            data-aos="fade-up"
-            data-aos-duration="600"
-          >
+          <div class="card activities__card">
             <picture>
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/webp"
+                data-srcset="img/activity-4.webp"
                 srcset="img/activity-4.webp"
               />
               <source
-                class="card__image"
+                class="card__image lazyload"
                 type="image/jpeg"
+                data-srcset="img/activity-4.jpg"
                 srcset="img/activity-4.jpg"
               />
               <img
+                loading="lazy"
+                data-src="img/activity-4.jpg"
                 src="img/activity-4.jpg"
                 alt="The blue marine discovery quest"
-                class="card__image"
+                class="card__image lazyload"
               />
             </picture>
             <h3 class="card__title">The blue marine discovery quest</h3>
@@ -1023,6 +1248,7 @@
         <div class="footer-wrapper">
           <img
             data-src="img/vertical-logo.svg"
+            src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
             class="logo footer__logo lazyload"
           />
@@ -1176,7 +1402,6 @@
                   class="input footer__input"
                   placeholder="Your Full Name*"
                   name="name"
-                  required
                 />
               </div>
               <!-- /.footer__input-group -->
@@ -1187,7 +1412,6 @@
                   placeholder="Phone Number*"
                   name="phone"
                   data-mask="+7 (000) 000-00-00"
-                  required
                 />
               </div>
               <!-- /.footer__input-group -->
@@ -1223,7 +1447,9 @@
             </li>
           </ul>
           <img
+            loading="lazy"
             data-src="img/bottom-icons.png"
+            src="img/bottom-icons.png"
             alt="bottom icons"
             class="bottom__icons lazyload"
           />
@@ -1245,8 +1471,6 @@
               class="input modal__input"
               placeholder="Your Full Name*"
               name="name"
-              required
-              minlength="2"
             />
             <input
               type="tel"
@@ -1254,14 +1478,12 @@
               placeholder="Phone Number*"
               name="phone"
               data-mask="+7 (000) 000-00-00"
-              required
             />
             <input
               type="email"
               class="input modal__input"
               placeholder="Your Email*"
               name="email"
-              required
             />
             <textarea
               class="message modal__message"
@@ -1284,11 +1506,26 @@
       <!-- /.modal__container -->
     </div>
     <!-- /.modal -->
-    <script defer src="js/jquery-3.5.1.min.js"></script>
-    <script defer src="js/swiper-bundle.min.js"></script>
-    <script defer src="js/jquery.validate.min.js"></script>
+    <script>
+      function init() {
+        var imgDefer = document.getElementsByTagName('img');
+        for (var i = 0; i < imgDefer.length; i++) {
+          if (imgDefer[i].getAttribute('data-src')) {
+            imgDefer[i].setAttribute(
+              'src',
+              imgDefer[i].getAttribute('data-src')
+            );
+          }
+        }
+      }
+      // window.onload = init;
+    </script>
+    <!-- <script defer src="js/jquery-3.5.1.min.js"></script> -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script defer src="js/swiper-bundle.min.js"></script> -->
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="js/jquery.mask.min.js"></script>
-    <script defer src="js/aos.js"></script>
+    <script defer src="js/jquery.validate.min.js"></script>
     <script defer src="js/main.js"></script>
   </body>
 </html>

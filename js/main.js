@@ -2,10 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   var hotelSlider = new Swiper('.hotel-slider', {
-    // Optional parameters
     loop: true,
-
-    // Navigation arrows
     navigation: {
       nextEl: '.hotel-slider__button--next',
       prevEl: '.hotel-slider__button--prev',
@@ -16,10 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var reviewSlider = new Swiper('.reviews-slider', {
-    // Optional parameters
     loop: true,
-
-    // Navigation arrows
     navigation: {
       nextEl: '.reviews-slider__button--next',
       prevEl: '.reviews-slider__button--prev',
@@ -28,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bigCard = document.getElementById('big-card');
   const body = document.querySelector('body');
-
   let clientWidth = document.documentElement.clientWidth;
   const menuButton = document.querySelector('.menu-button');
 
@@ -64,6 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDialog = document.querySelector('.modal__dialog');
   const modalContainer = document.querySelector('.modal__container');
   const modalForm = document.querySelector('.modal__form');
+  const googleMap = document.querySelector('.map__frame');
+
+  googleMap.addEventListener('mouseover', initMap);
+
+  function initMap() {
+    if (googleMap.getAttribute('data-src')) {
+      googleMap.setAttribute('src', googleMap.getAttribute('data-src'));
+    }
+    googleMap.removeEventListener('mouseover', initMap);
+  }
 
   const closeModal = () => {
     modalDialog.classList.remove('modal__dialog--active');
@@ -161,6 +164,4 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   });
-
-  AOS.init();
 });
