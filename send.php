@@ -72,4 +72,12 @@ try {
 
     //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
     // Отображение результата
-    header('Location: thanks.php?request='.$request);
+    if ($request == 'subscribe') {
+      header('Location: subscribe.html');
+    };
+    if ($request == 'sendmsg') {
+      header('Location: sendmsg.html');
+    };
+    if ($request == 'booking') {
+      header('Location: booking.html');
+    };
