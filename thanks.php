@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=2dfa9b75-96cd-44a3-8c50-de51562f5566&lang=ru_RU"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
+    <script src="js/lazysizes.min.js" async></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
+    />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -145,10 +145,15 @@
                     echo "Подписка оформлена!";
                     $text = "Мы будем информировать вас о наших новостях";
                   }
-                  if ($type == "send") {
+                  if ($type == "sendmsg") {
                     echo "Сообщение отправлено!";
                     $text = "Наш менеджер позвонит вам через 10 минут";
                   }
+                  if ($type == "booking") {
+                    echo "Заявка на бронирование отправлена!";
+                    $text = "Наш менеджер свяжется с вами через 10 минут";
+                  }
+                  
                 ?>
               </h1>
             </div>
@@ -173,9 +178,10 @@
       <div class="container">
         <div class="footer-wrapper">
           <img
+            data-src="img/vertical-logo.svg"
             src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
+            class="logo footer__logo lazyload"
           />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -274,7 +280,7 @@
             </p>
             <ul class="footer__ul">
               <li class="footer__item footer__item--mb-2">
-                <div class="footer__icon-wrapper">
+                <div class="footer__icon-wrapper footer__icon-wrapper--map">
                   <img
                     class="footer__icon"
                     src="img/map-marker.svg"
@@ -285,17 +291,23 @@
                 States
               </li>
               <li class="footer__item footer__item--mb-2">
-                <div class="footer__icon-wrapper">
+                <div class="footer__icon-wrapper footer__icon-wrapper--phone">
                   <img
                     class="footer__icon"
                     src="img/contact-phone-call.svg"
                     alt="icon: phone-call"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="">
+                  Tel (business hours):
+                  <a href="tel:2691500" class="footer__link">269 1500</a><br />
+                  Tel (hotline) Monday - Saturday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00&nbsp;am&nbsp;– 20:00&nbsp;pm) <br />
+                  Tel (hotline) Sunday:
+                  <a href="tel:52566138" class="footer__link">52-56-61-38</a>
+                  (08:00&nbsp;am&nbsp;– 14:00&nbsp;pm)
+                </div>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -305,7 +317,9 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a href="mailto:cherly.lawson@example.com" class="footer__link">
+                  cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -319,7 +333,6 @@
                   class="input footer__input"
                   placeholder="Your Full Name*"
                   name="name"
-                  required
                 />
               </div>
               <!-- /.footer__input-group -->
@@ -330,7 +343,6 @@
                   placeholder="Phone Number*"
                   name="phone"
                   data-mask="+7 (000) 000-00-00"
-                  required
                 />
               </div>
               <!-- /.footer__input-group -->
@@ -366,19 +378,69 @@
             </li>
           </ul>
           <img
+            loading="lazy"
+            data-src="img/bottom-icons.png"
             src="img/bottom-icons.png"
             alt="bottom icons"
-            class="bottom__icons"
+            class="bottom__icons lazyload"
           />
         </div>
         <!-- /.footer__bottom -->
       </div>
       <!-- /.container -->
     </footer>
-
+    <div class="modal">
+      <div class="modal__container">
+        <div class="modal__dialog">
+          <a href="#" class="modal__close">
+            <img src="img/close.svg" alt="Icon: close" />
+          </a>
+          <h3 class="modal__title modal__title--mb-3">Booking</h3>
+          <form action="send.php" method="POST" class="form modal__form">
+            <input
+              type="text"
+              class="input modal__input"
+              placeholder="Your Full Name*"
+              name="name"
+            />
+            <input
+              type="tel"
+              class="input modal__input"
+              placeholder="Phone Number*"
+              name="phone"
+              data-mask="+7 (000) 000-00-00"
+            />
+            <input
+              type="email"
+              class="input modal__input"
+              placeholder="Your Email*"
+              name="email"
+            />
+            <textarea
+              class="message modal__message"
+              placeholder="Message"
+              name="message"
+            ></textarea>
+            <button
+              class="button modal__button"
+              type="submit"
+              name="form"
+              value="send"
+            >
+              Send
+            </button>
+            <span class="modal__info">* Required Fields</span>
+          </form>
+        </div>
+        <!-- /.modal__dialog -->
+      </div>
+      <!-- /.modal__container -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/parallax.min.js"></script>
   </body>
 </html>

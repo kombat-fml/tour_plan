@@ -16,21 +16,30 @@ if ($form == 'subscribe') {
   $title = "Новая подписка на сайте Best Tour Plan";
   $body = "
   <h2>Новая подписка</h2>
-  <b>e-mail:</b><br>$email
+  <b>E-mail:</b><br>$email
   ";
   $request = 'subscribe';
-} else {
-  // Формирование самого письма
+} elseif ($form == 'sendmsg') {
   $title = "Новое обращение Best Tour Plan";
   $body = "
   <h2>Новое обращение</h2>
   <b>Имя:</b> $name<br>
   <b>Телефон:</b> $phone<br><br>
+  <b>Сообщение:</b><br>$message
+  ";
+  $request = 'sendmsg';
+} else {
+  $title = "Новое бронирование Best Tour Plan";
+  $body = "
+  <h2>Новое бронирование</h2>
+  <b>Имя:</b> $name<br>
+  <b>Телефон:</b> $phone<br><br>
   <b>E-mail:</b> $email<br><br>
   <b>Сообщение:</b><br>$message
   ";
-  $request = 'send';
-};
+  $request = 'booking';
+}
+;
 
 
 // Настройки PHPMailer

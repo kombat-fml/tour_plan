@@ -80,8 +80,10 @@
   &__input
     font-size: 12px
     line-height: 15px
-    color: inherit
     width: 100%
+    color: $text-color
+    &::placeholder
+      color: #BDBDBD
     &-group
       margin-bottom: 15px
       flex-basis: 48%
@@ -93,7 +95,9 @@
     resize: none
     font-size: 12px
     line-height: 15px
-    color: inherit
+    color: $text-color
+    &::placeholder
+      color: #BDBDBD
   &__info
     font-weight: bold
     font-size: 12px
