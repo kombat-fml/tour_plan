@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Hotel Booking</title>
@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body style="padding-right: 0;">
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="index.html" class="logo">
+          <a href="" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -61,7 +61,9 @@
       <div class="navbar-bottom">
         <div class="container">
           <ul class="navbar-menu">
-            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <li
+              class="navbar-menu__item navbar-menu__item-user navbar-menu__item--mobile--visible"
+            >
               <a
                 href="#"
                 class="user navbar__user navbar__user--mobile--visible"
@@ -74,7 +76,9 @@
                 <span class="user__name user__name--light">Nathan</span>
               </a>
             </li>
-            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <li
+              class="navbar-menu__item navbar-menu__item-search navbar-menu__item--mobile--visible"
+            >
               <form
                 action="#"
                 class="search navbar__search navbar__search--mobile--visible"
@@ -173,7 +177,6 @@
     </section>
     <!-- /.hotel -->
 
-
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
@@ -242,13 +245,23 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="https://www.facebook.com/" class="footer__link"
-                ><img src="img/facebook.svg" alt="Icon: facebook"
-              /></a>
-              <a href="https://www.youtube.com/" class="footer__link"
+              <a
+                href="https://www.facebook.com/"
+                class="footer__link"
+                target="_blank"
+              >
+                <img src="img/facebook.svg" alt="Icon: facebook" />
+              </a>
+              <a
+                href="https://www.youtube.com/"
+                class="footer__link"
+                target="_blank"
                 ><img src="img/youtube.svg" alt="Icon: youtube"
               /></a>
-              <a href="https://www.instagram.com/" class="footer__link"
+              <a
+                href="https://www.instagram.com/"
+                class="footer__link"
+                target="_blank"
                 ><img src="img/instagram.svg" alt="Icon: instagram"
               /></a>
             </div>
@@ -274,7 +287,7 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title-details">Contact Details</h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -325,7 +338,7 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+            <h3 class="footer__title footer__title-form">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
               <div class="footer__input-group">
                 <input
@@ -355,7 +368,7 @@
                 class="button footer__button"
                 type="submit"
                 name="form"
-                value="send"
+                value="sendmsg"
               >
                 Send
               </button>
@@ -425,7 +438,7 @@
               class="button modal__button"
               type="submit"
               name="form"
-              value="send"
+              value="booking"
             >
               Send
             </button>
