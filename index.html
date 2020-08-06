@@ -61,7 +61,9 @@
       <div class="navbar-bottom">
         <div class="container">
           <ul class="navbar-menu">
-            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <li
+              class="navbar-menu__item navbar-menu__item-user navbar-menu__item--mobile--visible"
+            >
               <a
                 href="#"
                 class="user navbar__user navbar__user--mobile--visible"
@@ -74,7 +76,9 @@
                 <span class="user__name user__name--light">Nathan</span>
               </a>
             </li>
-            <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+            <li
+              class="navbar-menu__item navbar-menu__item-search navbar-menu__item--mobile--visible"
+            >
               <form
                 action="#"
                 class="search navbar__search navbar__search--mobile--visible"
@@ -921,33 +925,36 @@
     <!-- /.packages -->
 
     <section class="newsletter lazyload" data-bgset="img/newsletter-bg.jpg">
-      <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
-          subscribe to our
-          <span class="newsletter-title__strong">Newsletter</span>
-        </h2>
-        <form
-          action="send.php"
-          method="POST"
-          class="subscribe newsletter__subscribe form"
-        >
-          <input
-            type="email"
-            class="subscribe__input"
-            placeholder="Your email address"
-            name="email"
-          />
-          <button
-            class="subscribe__button"
-            type="submit"
-            name="form"
-            value="subscribe"
+      <div class="container">
+        <div class="newsletter-wrapper">
+          <h2 class="newsletter-title newsletter__title">
+            subscribe to our
+            <span class="newsletter-title__strong">Newsletter</span>
+          </h2>
+          <form
+            action="send.php"
+            method="POST"
+            class="subscribe newsletter__subscribe form"
           >
-            Send
-          </button>
-        </form>
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Your email address"
+              name="email"
+            />
+            <button
+              class="subscribe__button"
+              type="submit"
+              name="form"
+              value="subscribe"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+        <!-- /.newsletter-wrapper -->
       </div>
-      <!-- /.newsletter-wrapper -->
+      <!-- /.container -->
     </section>
     <section class="reviews">
       <div class="container">
@@ -1091,18 +1098,15 @@
                 </div>
                 <!-- /.reviews-slider__profile -->
                 <p class="reviews-slider__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Officia magni nobis error odit accusantium sint, accusamus a
-                  quisquam obcaecati saepe nostrum maiores. Provident sint et
-                  facere molestias modi iusto minus vero fugiat, earum deserunt
-                  rerum ullam harum fuga obcaecati eveniet optio sapiente quas
-                  error impedit eaque quasi alias officia. Vel nihil quisquam
-                  quos velit dicta quia ut possimus recusandae, tempore ducimus
-                  sit reiciendis magnam alias at dignissimos dolore? A expedita
-                  explicabo possimus iste quas repellendus corrupti quod quia
-                  error, esse, cumque delectus voluptatem illum! Ratione,
-                  ducimus. Labore minus eveniet commodi necessitatibus, fuga
-                  numquam, illo sit odio, ex doloribus ducimus consequuntur.
+                  It was very nice hotel with cleanliness. Staff behavior was
+                  good and polite. They welcome us very well. Issue was only
+                  that Lift was not in working and we were allotted to 3rd floor
+                  and amenities articles were in corner of gallery which were
+                  giving bad feeling. Breakfast was good and support of the
+                  staff was also very nice. Location is not good as per
+                  atmosphere, it is very nearby most of the popular places but
+                  self location in a narrow street is not good. Overall it was a
+                  good experience and could recommend.
                 </p>
               </div>
               <!-- /.reviews-slider__item -->
@@ -1348,7 +1352,7 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title-details">Contact Details</h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -1399,7 +1403,7 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+            <h3 class="footer__title footer__title-form">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
               <div class="footer__input-group">
                 <input

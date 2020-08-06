@@ -8,12 +8,12 @@
     grid-template-columns: repeat(12, 1fr)
     grid-auto-rows: minmax(30px, min-content)
     grid-gap: 20px
-    padding-bottom: 95px
+    padding-bottom: 102px
   &__logo
-    width: 166px
+    width: 154px
     grid-column: 1 / 4
     grid-row: 1 / 5
-    align-self: stretch
+    align-self: center
   &__categories
     grid-column: 4 / 7
     grid-row: 1 / 5
@@ -36,6 +36,7 @@
       grid-column: 1 / 7
       grid-row: 6 / 7
     &-form
+      margin-top: -10px
       grid-column: 7 / 13
       grid-row: 6 / 7
   &__legal
@@ -50,8 +51,12 @@
     text-transform: uppercase
     &--inline
       margin: 0 43px 0 0
-    &--mb-3
-      margin-bottom: 30px
+    &-form
+      margin-top: 26px
+      margin-bottom: 34px
+    &-details
+      margin-top: 28px
+      margin-bottom: 26px
   &__ul
     padding: 0
     margin: 0
@@ -73,6 +78,8 @@
   &__text
     margin-top: 0
     margin-bottom: 22px
+    font-size: 14px
+    line-height: 160%
     color: $footer-text-color
   &__link
     text-decoration: none
@@ -104,15 +111,15 @@
     line-height: 15px
     color: #E0E0E0
 .bottom
+  position: relative
   display: flex
   justify-content: center
-  align-items: end
   &__list
     padding: 0
     margin: 0 auto
     list-style: none
     display: flex
-    align-items: center
+    align-items: end
   &__item
     font-size: 12px
     line-height: 15px
@@ -123,6 +130,8 @@
     text-decoration: none
     color: inherit
   &__icons
+    position: absolute
+    top: -7px
+    right: 0
     width: 136px
-    margin-left: -136px
 

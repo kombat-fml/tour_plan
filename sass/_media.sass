@@ -38,10 +38,10 @@
   button 
     cursor: none
   .newsletter
+    padding: 92px 0 93px 0
     background-image: url(../img/newsletter-bg-992.jpg)
     background-image: url(../img/newsletter-bg-992.webp)
-  .container, 
-  .newsletter-wrapper
+  .container
     max-width: 700px
   .logo
     width: 132px
@@ -80,6 +80,12 @@
       &__item
         max-width: 580px
         padding: 0 62px 30px 62px
+      &__button
+        top: 50%
+        &--prev
+          left: 0
+        &--next
+          right: 0
     &__title
       font-size: 30px
       line-height: 38px
@@ -103,13 +109,13 @@
     &-wrapper
       grid-template-columns: repeat(12, 1fr)
       grid-auto-rows: minmax(0px, min-content)
-      grid-row-gap: 30px
-      padding-bottom: 56px
+      grid-row-gap: 50px
+      padding-bottom: 65px
     &__input
       &-group
         flex-basis: 48%
     &__logo
-      width: 104px
+      width: 96px
       grid-row: 1 / 2
       grid-column: 1 / 4
     &__social
@@ -124,10 +130,11 @@
     &__contact
       &-details
         grid-column: 1 / 10
-        grid-row: 4 / 5
+        grid-row: 3 / 4
       &-form
+        margin-top: 0
         grid-column: 1 / 10
-        grid-row: 5 / 6
+        grid-row: 4 / 5
         max-width: 540px
     &__additional
       grid-row: 2 / 3
@@ -138,19 +145,27 @@
       grid-column: 9 / 13
       justify-self: center
       margin-left: 0
+    &__title
+      &-details
+        margin-top: 10px
+      &-form
+        margin-top: -7px
   .bottom
     &__list, &__icons
       margin-left: 0
   .modal
     &__dialog
       width: 478px
-@media (max-width: 768px)
+@media (max-width: 767px)
   .container
     max-width: 576px
     width: 92%
   body
-    padding-top: 78px
+    padding-top: 70px
   .navbar
+    &-top
+      padding-top: 28px
+      padding-bottom: 28px
     &--mobile
       &--fixed
         position: fixed
@@ -164,14 +179,19 @@
       left: 0
       right: 0
       bottom: 0
-      top: 78px
+      top: 74px
       padding-top: 30px
       &--visible
         display: block
     &-menu
+      padding: 0
       flex-direction: column
       &__item
-        margin-bottom: 20px
+        margin-bottom: 17px
+        &-user
+          margin-bottom: 25px
+        &-search
+          margin-bottom: 39px
         &--mobile
           &--visible
             display: block
@@ -252,8 +272,6 @@
     background-image: url(../img/newsletter-bg-768.webp)
     &-wrapper
       flex-direction: column
-      max-width: 576px
-      width: 92%
       align-items: flex-start
     &-title
       font-size: 20px
@@ -262,7 +280,7 @@
         font-size: 30px
         line-height: 38px
     &__title
-      margin-bottom: 37px
+      margin-bottom: 41px
   .subscribe
     &__input
       padding-left: 20px
@@ -282,11 +300,11 @@
         &--next
           right: 50%
           transform: translateX(50%)
-          margin-right: -80px
+          margin-right: -91px
         &--prev
           left: 50%
           transform: translateX(-50%)
-          margin-left: -80px
+          margin-left: -91px
   .activities
     padding-bottom: 40px
     padding-top: 40px
@@ -329,23 +347,30 @@
         margin-left: 0
     &__additional
       justify-self: start
-      grid-row: 3
-      grid-column: 1
-    &__categories
       grid-row: 4
       grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      margin-bottom: 10px
     &__legal
       justify-self: start
-      grid-row: 5
+      grid-row: 3
       grid-column: 1
     &__contact
       &-details
         grid-row: 6
         grid-column: 1
+        margin-bottom: 10px
       &-form
         grid-row: 7
         grid-column: 1
     &__title
+      &-details
+        margin-top: 0
+      &-form
+        margin-top: 0
+        margin-bottom: 15px
       &--inline
         flex-basis: 100%
         margin-bottom: 20px
@@ -360,12 +385,28 @@
       width: 450px
       padding: 30px 60px
 @media (max-width: 576px)
+  .container
+    min-width: 280px
+    width: 85%
   .logo 
     width: 99px
   .hotel
+    &-right
+      &-wrapper
+        min-height: 403px
     &__slider
       margin-bottom: 20px
-      height: 210px
+      height: 180px
+    &-info
+      &__text
+        margin-bottom: 18px
+      &__hotel
+        &-name
+          margin-right: 0
+  .booking
+    padding: 29px 22px 26px 22px
+  .map 
+    height: 172px
   .newsletter
     background-image: url(../img/newsletter-bg-576.jpg)
     background-image: url(../img/newsletter-bg-576.webp)
@@ -396,6 +437,8 @@
       font-size: 18px
       line-height: 23px
   .footer
+    &__logo
+      margin-bottom: 13px
     &__info
       flex-basis: 100%
       margin-bottom: 15px
@@ -407,6 +450,11 @@
     &__list
       flex-basis: 100%
       margin-bottom: 10px
+    &__icons
+      position: static
+    &__item
+      &:not(:last-child)
+        margin-right: 8px
   .search
     &__input
       &--mobile
