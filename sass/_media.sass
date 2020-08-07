@@ -35,8 +35,6 @@
     background-image: url(../img/newsletter-bg-1200.jpg)
     background-image: url(../img/newsletter-bg-1200.webp)
 @media (max-width: 992px)
-  button 
-    cursor: none
   .newsletter
     padding: 92px 0 93px 0
     background-image: url(../img/newsletter-bg-992.jpg)
@@ -477,3 +475,39 @@
   .modal
     &__container
       display: block
+@media (min-width: 993px)
+  .hotel
+    &__thanks
+      &-link
+        &:hover
+          background-color: $primary*0.8
+  .search, .booking, .subscribe, .card, .footer, .modal
+    &__button
+      &:hover
+        background-color: $primary*0.8
+  .packages
+    &-card
+      &__button
+        &:hover
+          background-color: $primary*0.8
+  .navbar
+    &-menu
+      &__link
+        display: inline-block
+        &:after
+          display: block
+          content: ""
+          height: 1px
+          width: 0%
+          background-color: $light
+          transition: width 0.2s ease-in-out
+        &:focus:after, &:hover:after
+          width: 100%
+  .footer
+    &__icon
+      &-social
+        transition: box-shadow 0.2s
+        &:hover
+          box-shadow: 0 2px 1px $footer-text-color
+
+          
